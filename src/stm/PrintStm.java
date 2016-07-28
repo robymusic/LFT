@@ -17,6 +17,6 @@ public class PrintStm extends Stm{
 
 	@Override
 	public void interpretStament(Stm s, Memory mem) {
-		// resolver		
+		System.out.print(expos.interpretExp(expos, mem));
 	}
 }

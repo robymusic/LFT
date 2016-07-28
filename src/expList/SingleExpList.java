@@ -1,5 +1,7 @@
 package expList;
 
+import java.util.ArrayList;
+
 import interpretador.Memory;
 import exp.Exp;
 
@@ -14,10 +16,9 @@ public class SingleExpList extends ExpList {
 		return exp.print();
 	}
 
-//	@Override
-//	int[] interpretExp(ExpList e, Memory mem) {	
-//		int[] x = new int[1]; 
-//		x[0]=exp.interpretExp(exp, mem);
-//		return x;
-//	}
+	public ArrayList<Integer> interpretExp(ExpList e, Memory mem) {	
+		ArrayList<Integer> ep = new ArrayList<Integer>(); 
+		ep.add(exp.interpretExp(exp, mem));
+		return ep;
+	}
 }
