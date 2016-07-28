@@ -18,7 +18,7 @@ public class PairExpList extends ExpList{
 	public ArrayList<Integer> interpretExp(ExpList e, Memory mem) {
 		ArrayList<Integer> ep = new ArrayList<Integer>(); 
 		ep.add(head.interpretExp(head, mem));
-		tail.interpretExp(tail, mem);
+		ep.addAll(tail.interpretExp(tail, mem));
 		return ep;
 	}
 

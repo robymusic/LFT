@@ -17,7 +17,7 @@ public class EseqExp extends Exp {
 		return "("+stm.print()+", "+exp.print()+")";
 	}
 	
-	public int interpretExp(Exp e, Memory mem) {
+	public int interpretExp(Exp e, Memory mem) {		
 		stm.interpretStament(stm, mem);
 		return exp.interpretExp(exp, mem);
 	}
